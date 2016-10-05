@@ -1,0 +1,24 @@
+﻿{
+  "dependencies": {
+    "Google.Apis": "1.16.0",
+    "Google.Apis.Auth": "1.16.0",
+    "Google.Apis.Core": "1.16.0",
+    "Google.Apis.Discovery.v1": "1.16.0",
+    "Google.Apis.Oauth2.v2": "1.16.0.623",
+    "Google.Apis.Vision.v1": "1.16.0.599",
+    "Microsoft.Bcl.Async": "1.0.168",
+    "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
+    "Zlib.Portable.Signed": "1.11.0"
+  },
+  "frameworks": {
+    "uap10.0": {}
+  },
+  "runtimes": {
+    "win10-arm": {},
+    "win10-arm-aot": {},
+    "win10-x86": {},
+    "win10-x86-aot": {},
+    "win10-x64": {},
+    "win10-x64-aot": {}
+  }
+}

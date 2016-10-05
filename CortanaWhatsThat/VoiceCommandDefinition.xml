@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.1">
+
+  <CommandSet xml:lang="en-us" Name="WhatsThat">
+    <AppName>What's That</AppName>
+
+    <Command Name="WhatsThat">
+      <Example>What's that</Example>
+      <ListenFor>what's that</ListenFor>
+      <ListenFor>what's this</ListenFor>
+      <ListenFor>what is that</ListenFor>
+      <ListenFor>what is this</ListenFor>
+      <Feedback>Just a moment</Feedback>
+      <Navigate/>
+    </Command>
+
+  </CommandSet>
+
+</VoiceCommands>
