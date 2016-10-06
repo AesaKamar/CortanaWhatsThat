@@ -37,8 +37,15 @@ namespace CortanaWhatsThat
         /// will be used such as when the application is launched to open a specific file.
         /// </summary>
         /// <param name="e">Details about the launch request and process.</param>
-        protected override void OnLaunched(LaunchActivatedEventArgs e)
+        protected override async void OnLaunched(LaunchActivatedEventArgs e)
         {
+            //Register the Voice Command Definition file for Cortana
+            var vcdFile = await Windows.Storage.StorageFile.GetFileFromApplicationUriAsync( new Uri("ms-appx:///VoiceCommandDefinition.xml"));
+            await Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager.InstallCommandDefinitionsFromStorageFileAsync(vcdFile);
+
+            //Register Cortana's Background service 
+            BackgroundServices.BackgroundService.Register();
+
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
             {
@@ -75,6 +82,28 @@ namespace CortanaWhatsThat
                     rootFrame.Navigate(typeof(MainPage), e.Arguments);
                 }
                 // Ensure the current window is active
+                Window.Current.Activate();
+            }
+        }
+
+        /// <summary>
+        /// Invoked when the applicaton is started in a nonstandard way
+        /// Like when invoked by Cortana
+        /// </summary>
+        /// <param name="args">The events related to activation</param>
+        protected override void OnActivated(IActivatedEventArgs args)
+        {
+            base.OnActivated(args);
+            if ( args.Kind == ActivationKind.VoiceCommand)
+            {
+
+            }
+            if ( Window.Current.Content == null)
+            {
+                var rootFrame = new Frame();
+                rootFrame.NavigationFailed += OnNavigationFailed;
+                Window.Current.Content = rootFrame;
+                rootFrame.Navigate(typeof(MainPage));
                 Window.Current.Activate();
             }
         }

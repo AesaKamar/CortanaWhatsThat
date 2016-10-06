@@ -7,7 +7,7 @@ using Google.Apis.Services;
 using System.IO;
 using System.Collections.Generic;
 
-namespace CortanaWhatsThat.GoogleVision
+namespace GoogleVisionAPI
 {
     /// <summary>
     /// This example uses the discovery API to list all APIs in the discovery repository.
@@ -16,7 +16,7 @@ namespace CortanaWhatsThat.GoogleVision
     /// <summary>
     public class VisionClient
     {
-        public async Task Run()
+        public async Task<BatchAnnotateImagesResponse> Run()
         {
             var service = new VisionService(new BaseClientService.Initializer
             {
@@ -54,7 +54,7 @@ namespace CortanaWhatsThat.GoogleVision
             var request = resource.Annotate(googleBatchAnnotateRequest);
             var response = await request.ExecuteAsync();
 
-            Console.WriteLine(response);
+            return response;
         }
     }
 }

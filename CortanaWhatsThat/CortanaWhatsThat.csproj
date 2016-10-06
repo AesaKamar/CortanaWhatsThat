@@ -115,7 +115,9 @@
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
-    <Content Include="VoiceCommandDefinition.xml" />
+    <Content Include="VoiceCommandDefinition.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -128,6 +130,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BackgroundServices\BackgroundServices.csproj">
+      <Project>{9dfa2aa3-aab6-42ef-a7a1-07b4741dede1}</Project>
+      <Name>BackgroundServices</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GoogleVisionRepository\GoogleVisionRepository.csproj">
       <Project>{daf4b891-1eef-45fc-87a5-a233ef447791}</Project>
       <Name>GoogleVisionRepository</Name>

@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
-<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.1">
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
 
-  <CommandSet xml:lang="en-us" Name="WhatsThat">
-    <AppName>What's That</AppName>
-
+  <CommandSet xml:lang="en-us">
+    <AppName>CortanaWhatsThat</AppName>
+    <Example>What's that?</Example>
     <Command Name="WhatsThat">
-      <Example>What's that</Example>
-      <ListenFor>what's that</ListenFor>
-      <ListenFor>what's this</ListenFor>
-      <ListenFor>what is that</ListenFor>
-      <ListenFor>what is this</ListenFor>
+      <Example>What's that?</Example>
+      <ListenFor>What's that?</ListenFor>
+      <ListenFor>What's this?</ListenFor>
+      <ListenFor>What is that?</ListenFor>
+      <ListenFor>What is this?</ListenFor>
       <Feedback>Just a moment</Feedback>
-      <Navigate/>
+      <Navigate Target="MainPage.xaml"/>
     </Command>
 
   </CommandSet>

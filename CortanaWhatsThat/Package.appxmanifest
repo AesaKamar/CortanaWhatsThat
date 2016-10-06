@@ -4,7 +4,7 @@
   <mp:PhoneIdentity PhoneProductId="82307062-ceca-482e-a49d-f53244d9b3bd" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>CortanaWhatsThat</DisplayName>
-    <PublisherDisplayName>akamar</PublisherDisplayName>
+    <PublisherDisplayName>AesaKamar</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Dependencies>
@@ -20,6 +20,17 @@
         </uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
+      <Extensions>
+        <uap:Extension Category="windows.appService" EntryPoint="VoiceCommandServices.VoiceCommandService">
+          <uap:AppService Name="VoiceCommandService" />
+        </uap:Extension>
+        <Extension Category="windows.backgroundTasks" EntryPoint="BackgroundServices.BackgroundService">
+          <BackgroundTasks>
+            <Task Type="systemEvent" />
+            <Task Type="timer" />
+          </BackgroundTasks>
+        </Extension>
+      </Extensions>
     </Application>
   </Applications>
   <Capabilities>

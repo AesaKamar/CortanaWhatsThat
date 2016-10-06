@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.Background;
 
-namespace CortanaWhatsThat.BackgroundServices
+namespace BackgroundServices
 {
-    public sealed class CortanaIdentifier : IBackgroundTask
+    public sealed class BackgroundService : IBackgroundTask
     {
         public void Run(IBackgroundTaskInstance taskInstance)
         {
@@ -18,7 +18,7 @@ namespace CortanaWhatsThat.BackgroundServices
         {
             //Grab the registration info for background tasks
             var isRegistered = BackgroundTaskRegistration.AllTasks.Values.Any(
-                t => t.Name == nameof(CortanaIdentifier));
+                t => t.Name == nameof(BackgroundService));
             //Check if the background task is already registered
             if (isRegistered)
                 return;
@@ -30,8 +30,8 @@ namespace CortanaWhatsThat.BackgroundServices
             //Build the background task 
             var builder = new BackgroundTaskBuilder
             {
-                Name = nameof(CortanaIdentifier),
-                TaskEntryPoint = $"{nameof(BackgroundServices)}.{nameof(CortanaIdentifier)}"
+                Name = nameof(BackgroundService),
+                TaskEntryPoint = $"{nameof(BackgroundServices)}.{nameof(BackgroundService)}"
             };
             //Register the background task
             builder.SetTrigger(new TimeTrigger(120, false));
