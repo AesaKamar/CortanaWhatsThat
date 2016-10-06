@@ -6,10 +6,10 @@
     <Example>Identify 'this' or 'that'</Example>
     <Command Name="Identify">
       <Example>Identify that</Example>
-      
+
       <ListenFor RequireAppName="BeforePhrase">this</ListenFor>
       <ListenFor RequireAppName="BeforePhrase">that</ListenFor>
-      <Feedback> Word </Feedback>
+      <Feedback> Ok </Feedback>
       <VoiceCommandService Target="VoiceCommandService"/>
     </Command>
   </CommandSet>

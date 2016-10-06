@@ -65,6 +65,12 @@ namespace VoiceCommandService
         /// <returns></returns>
         private static async Task HandleReadImageLabelsCommandAsync(VoiceCommandServiceConnection connection)
         {
+            //Initialize some stuff
+            var CaptureClient = new CameraCaptureService.CameraCaptureService();
+            await CaptureClient.Init();
+            var GoogleVisionClient = new GoogleVisionAPI.VisionClient();
+
+            //Tell the user that we are doing something
             var userMessage = new VoiceCommandUserMessage();
             userMessage.DisplayMessage = "Analyzing";
             userMessage.SpokenMessage = "Analyzing";
@@ -72,12 +78,15 @@ namespace VoiceCommandService
             await connection.ReportProgressAsync(response);
 
             //TODO: Get the image
+            string imageString = await CaptureClient.Capture();
 
             //TODO: Send the Image through the Vision Client
+            var annotationResponse = await GoogleVisionClient.Run(imageString);
+            var joinedResponse = string.Join(", ", annotationResponse);
 
             //TODO: Set the User Message, Display & Spoken
-            userMessage.DisplayMessage = "Done";
-            userMessage.SpokenMessage = "Done";
+            userMessage.DisplayMessage = joinedResponse;
+            userMessage.SpokenMessage = joinedResponse;
             response = VoiceCommandResponse.CreateResponse(userMessage);
 
             await connection.ReportSuccessAsync(response);

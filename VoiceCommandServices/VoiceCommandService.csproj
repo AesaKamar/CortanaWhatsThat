@@ -111,6 +111,16 @@
     <Compile Include="VoiceCommandService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CameraCaptureService\CameraCaptureService.csproj">
+      <Project>{46a22c04-7e23-4de1-9c5f-f06c33a56614}</Project>
+      <Name>CameraCaptureService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GoogleVisionRepository\GoogleVisionRepository.csproj">
+      <Project>{daf4b891-1eef-45fc-87a5-a233ef447791}</Project>
+      <Name>GoogleVisionRepository</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

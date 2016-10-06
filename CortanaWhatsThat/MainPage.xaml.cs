@@ -32,7 +32,7 @@ namespace CortanaWhatsThat
         private async void button_Click(object sender, RoutedEventArgs e)
         {
             var client = new GoogleVisionAPI.VisionClient();
-            var response = await client.Run();
+            //var response = await client.Run();
 
         }
 
