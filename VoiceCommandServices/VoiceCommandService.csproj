@@ -7,8 +7,8 @@
     <ProjectGuid>{0557FE42-2F85-48E3-B8D3-DF99F00520DC}</ProjectGuid>
     <OutputType>winmdobj</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>VoiceCommandServices</RootNamespace>
-    <AssemblyName>VoiceCommandServices</AssemblyName>
+    <RootNamespace>VoiceCommandService</RootNamespace>
+    <AssemblyName>VoiceCommandService</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>

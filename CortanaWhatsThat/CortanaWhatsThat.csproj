@@ -116,7 +116,8 @@
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="VoiceCommandDefinition.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
@@ -137,6 +138,10 @@
     <ProjectReference Include="..\GoogleVisionRepository\GoogleVisionRepository.csproj">
       <Project>{daf4b891-1eef-45fc-87a5-a233ef447791}</Project>
       <Name>GoogleVisionRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VoiceCommandServices\VoiceCommandService.csproj">
+      <Project>{0557fe42-2f85-48e3-b8d3-df99f00520dc}</Project>
+      <Name>VoiceCommandService</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

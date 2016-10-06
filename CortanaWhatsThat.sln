@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackgroundServices", "Backg
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleVisionRepository", "GoogleVisionRepository\GoogleVisionRepository.csproj", "{DAF4B891-1EEF-45FC-87A5-A233EF447791}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VoiceCommandServices", "VoiceCommandServices\VoiceCommandServices.csproj", "{0557FE42-2F85-48E3-B8D3-DF99F00520DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VoiceCommandService", "VoiceCommandServices\VoiceCommandService.csproj", "{0557FE42-2F85-48E3-B8D3-DF99F00520DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

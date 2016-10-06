@@ -16,7 +16,7 @@ namespace GoogleVisionAPI
     /// <summary>
     public class VisionClient
     {
-        public async Task<BatchAnnotateImagesResponse> Run()
+        public async Task<AnnotateImageResponse> Run()
         {
             var service = new VisionService(new BaseClientService.Initializer
             {
@@ -54,7 +54,8 @@ namespace GoogleVisionAPI
             var request = resource.Annotate(googleBatchAnnotateRequest);
             var response = await request.ExecuteAsync();
 
-            return response;
+
+            return response.Responses[0];
         }
     }
 }

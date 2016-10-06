@@ -1,20 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
-
   <CommandSet xml:lang="en-us">
-    <AppName>CortanaWhatsThat</AppName>
-    <Example>What's that?</Example>
-    <Command Name="WhatsThat">
-      <Example>What's that?</Example>
-      <ListenFor>What's that?</ListenFor>
-      <ListenFor>What's this?</ListenFor>
-      <ListenFor>What is that?</ListenFor>
-      <ListenFor>What is this?</ListenFor>
-      <Feedback>Just a moment</Feedback>
-      <Navigate Target="MainPage.xaml"/>
+    <AppName>Identify</AppName>
+    <Example>Identify 'this' or 'that'</Example>
+    <Command Name="Identify">
+      <Example>Identify that</Example>
+      
+      <ListenFor RequireAppName="BeforePhrase">this</ListenFor>
+      <ListenFor RequireAppName="BeforePhrase">that</ListenFor>
+      <Feedback> Word </Feedback>
+      <VoiceCommandService Target="VoiceCommandService"/>
     </Command>
-
   </CommandSet>
-
 </VoiceCommands>

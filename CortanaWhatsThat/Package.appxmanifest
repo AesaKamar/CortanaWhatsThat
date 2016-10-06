@@ -3,7 +3,7 @@
   <Identity Name="82307062-ceca-482e-a49d-f53244d9b3bd" Publisher="CN=akamar" Version="1.0.0.0" />
   <mp:PhoneIdentity PhoneProductId="82307062-ceca-482e-a49d-f53244d9b3bd" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>CortanaWhatsThat</DisplayName>
+    <DisplayName>Identify</DisplayName>
     <PublisherDisplayName>AesaKamar</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -15,19 +15,20 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="CortanaWhatsThat.App">
-      <uap:VisualElements DisplayName="CortanaWhatsThat" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="CortanaWhatsThat" BackgroundColor="transparent">
+      <uap:VisualElements DisplayName="Identify" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="Identifies objects from HoloLens Camera using Google Vision" BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png">
         </uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
       <Extensions>
-        <uap:Extension Category="windows.appService" EntryPoint="VoiceCommandServices.VoiceCommandService">
+        <uap:Extension Category="windows.appService" EntryPoint="VoiceCommandService.VoiceCommandService">
           <uap:AppService Name="VoiceCommandService" />
         </uap:Extension>
         <Extension Category="windows.backgroundTasks" EntryPoint="BackgroundServices.BackgroundService">
           <BackgroundTasks>
             <Task Type="systemEvent" />
             <Task Type="timer" />
+            <Task Type="deviceUse" />
           </BackgroundTasks>
         </Extension>
       </Extensions>
