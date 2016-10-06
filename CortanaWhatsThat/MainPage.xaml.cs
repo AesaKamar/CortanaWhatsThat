@@ -35,5 +35,12 @@ namespace CortanaWhatsThat
             var response = await client.Run();
 
         }
+
+        private async void button1_Click(object sender, RoutedEventArgs e)
+        {
+            var captureService = new CameraCaptureService.CameraCaptureService();
+            await captureService.Init();
+            await captureService.Capture();
+        }
     }
 }
