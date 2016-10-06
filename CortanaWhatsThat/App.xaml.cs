@@ -43,8 +43,6 @@ namespace CortanaWhatsThat
             var vcdFile = await Windows.Storage.StorageFile.GetFileFromApplicationUriAsync( new Uri("ms-appx:///VoiceCommandDefinition.xml"));
             await Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager.InstallCommandDefinitionsFromStorageFileAsync(vcdFile);
 
-            //Register Cortana's Background service 
-            BackgroundServices.BackgroundService.Register();
 
             Frame rootFrame = Window.Current.Content as Frame;
 

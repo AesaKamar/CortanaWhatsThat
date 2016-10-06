@@ -24,13 +24,6 @@
         <uap:Extension Category="windows.appService" EntryPoint="VoiceCommandService.VoiceCommandService">
           <uap:AppService Name="VoiceCommandService" />
         </uap:Extension>
-        <Extension Category="windows.backgroundTasks" EntryPoint="BackgroundServices.BackgroundService">
-          <BackgroundTasks>
-            <Task Type="systemEvent" />
-            <Task Type="timer" />
-            <Task Type="deviceUse" />
-          </BackgroundTasks>
-        </Extension>
       </Extensions>
     </Application>
   </Applications>

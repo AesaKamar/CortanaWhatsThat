@@ -5,8 +5,6 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CortanaWhatsThat", "CortanaWhatsThat\CortanaWhatsThat.csproj", "{3742E426-2DF4-41A3-9759-BFB5F8F9330C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackgroundServices", "BackgroundServices\BackgroundServices.csproj", "{9DFA2AA3-AAB6-42EF-A7A1-07B4741DEDE1}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleVisionRepository", "GoogleVisionRepository\GoogleVisionRepository.csproj", "{DAF4B891-1EEF-45FC-87A5-A233EF447791}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VoiceCommandService", "VoiceCommandServices\VoiceCommandService.csproj", "{0557FE42-2F85-48E3-B8D3-DF99F00520DC}"
@@ -43,22 +41,6 @@ Global
 		{3742E426-2DF4-41A3-9759-BFB5F8F9330C}.Release|x86.ActiveCfg = Release|x86
 		{3742E426-2DF4-41A3-9759-BFB5F8F9330C}.Release|x86.Build.0 = Release|x86
 		{3742E426-2DF4-41A3-9759-BFB5F8F9330C}.Release|x86.Deploy.0 = Release|x86
-		{9DFA2AA3-AAB6-42EF-A7A1-07B4741DEDE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9DFA2AA3-AAB6-42EF-A7A1-07B4741DEDE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9DFA2AA3-AAB6-42EF-A7A1-07B4741DEDE1}.Debug|ARM.ActiveCfg = Debug|ARM
-		{9DFA2AA3-AAB6-42EF-A7A1-07B4741DEDE1}.Debug|ARM.Build.0 = Debug|ARM
-		{9DFA2AA3-AAB6-42EF-A7A1-07B4741DEDE1}.Debug|x64.ActiveCfg = Debug|x64
-		{9DFA2AA3-AAB6-42EF-A7A1-07B4741DEDE1}.Debug|x64.Build.0 = Debug|x64
-		{9DFA2AA3-AAB6-42EF-A7A1-07B4741DEDE1}.Debug|x86.ActiveCfg = Debug|x86
-		{9DFA2AA3-AAB6-42EF-A7A1-07B4741DEDE1}.Debug|x86.Build.0 = Debug|x86
-		{9DFA2AA3-AAB6-42EF-A7A1-07B4741DEDE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9DFA2AA3-AAB6-42EF-A7A1-07B4741DEDE1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9DFA2AA3-AAB6-42EF-A7A1-07B4741DEDE1}.Release|ARM.ActiveCfg = Release|ARM
-		{9DFA2AA3-AAB6-42EF-A7A1-07B4741DEDE1}.Release|ARM.Build.0 = Release|ARM
-		{9DFA2AA3-AAB6-42EF-A7A1-07B4741DEDE1}.Release|x64.ActiveCfg = Release|x64
-		{9DFA2AA3-AAB6-42EF-A7A1-07B4741DEDE1}.Release|x64.Build.0 = Release|x64
-		{9DFA2AA3-AAB6-42EF-A7A1-07B4741DEDE1}.Release|x86.ActiveCfg = Release|x86
-		{9DFA2AA3-AAB6-42EF-A7A1-07B4741DEDE1}.Release|x86.Build.0 = Release|x86
 		{DAF4B891-1EEF-45FC-87A5-A233EF447791}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DAF4B891-1EEF-45FC-87A5-A233EF447791}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAF4B891-1EEF-45FC-87A5-A233EF447791}.Debug|ARM.ActiveCfg = Debug|ARM
