@@ -72,16 +72,45 @@ namespace VoiceCommandService
 
             //Tell the user that we are doing something
             var userMessage = new VoiceCommandUserMessage();
-            userMessage.DisplayMessage = "Analyzing";
+            userMessage.DisplayMessage = "Analyzing your surroundings";
             userMessage.SpokenMessage = "Analyzing";
             var response = VoiceCommandResponse.CreateResponse(userMessage);
             await connection.ReportProgressAsync(response);
 
             //TODO: Get the image
-            string imageString = await CaptureClient.Capture();
+            string imageString;
+
+            try
+            {
+                imageString = await CaptureClient.Capture();
+            }
+            catch (Exception)
+            {
+                userMessage.DisplayMessage = "I can't access the camera, try opening up  the Identify app first";
+                userMessage.SpokenMessage = "No Camera. Try opening Identify first, then ask me again.";
+                response = VoiceCommandResponse.CreateResponse(userMessage);
+                await connection.ReportFailureAsync(response);
+                return;
+            }
+
+
+
 
             //TODO: Send the Image through the Vision Client
-            var annotationResponse = await GoogleVisionClient.Run(imageString);
+            List<string> annotationResponse;
+            try
+            {
+                annotationResponse = await GoogleVisionClient.Run(imageString);
+            }
+            catch (Exception)
+            {
+                userMessage.DisplayMessage = "Try checking your connection";
+                userMessage.SpokenMessage = "Hmm... I can't get a response from the cloud.";
+                response = VoiceCommandResponse.CreateResponse(userMessage);
+                await connection.ReportFailureAsync(response);
+                return;
+            }
+
             var joinedResponse = string.Join(", ", annotationResponse);
 
             //TODO: Set the User Message, Display & Spoken
