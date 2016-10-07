@@ -8,8 +8,13 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button x:Name="button" Content="Image" Margin="332,214,0,234" VerticalAlignment="Stretch" d:LayoutOverrides="Height" Click="button_Click"/>
-        <Button x:Name="button1" Content="Capture" HorizontalAlignment="Right" Margin="0,214,173,234" VerticalAlignment="Stretch" d:LayoutOverrides="Height, LeftMargin, RightMargin" Width="96" Click="button1_Click"/>
-
+        <TextBlock x:Name="textBlock" Height="97" Margin="199,0,213,37" TextWrapping="Wrap" VerticalAlignment="Bottom" TextAlignment="Center" d:LayoutOverrides="LeftPosition, RightPosition">
+            <Run Text="Try saying &quot;Identify this&quot; or &quot;Identify that&quot; to Cortana"/>
+            <LineBreak/>
+            <Run/>
+            <LineBreak/>
+            <Run Text="The Application will run in the background"/>
+        </TextBlock>
+        <Image x:Name="Assets_StoreLogo_png" Margin="315,90,296,148" Source="Assets/StoreLogo.png" Stretch="Fill" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition"/>
     </Grid>
 </Page>
