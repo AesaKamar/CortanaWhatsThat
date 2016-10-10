@@ -6,6 +6,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -27,20 +28,11 @@ namespace CortanaWhatsThat
         {
             this.InitializeComponent();
 
-        }
-
-        private async void button_Click(object sender, RoutedEventArgs e)
-        {
-            var client = new GoogleVisionAPI.VisionClient();
-            //var response = await client.Run();
+            // Set the preferred launch view size
+            ApplicationView.PreferredLaunchViewSize = new Size { Width = 850, Height = 500 };
+            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
 
         }
 
-        private async void button1_Click(object sender, RoutedEventArgs e)
-        {
-            var captureService = new CameraCaptureService.CameraCaptureService();
-            await captureService.Init();
-            await captureService.Capture();
-        }
     }
 }

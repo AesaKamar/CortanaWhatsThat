@@ -15,6 +15,6 @@
             <LineBreak/>
             <Run Text="The Application will run in the background"/>
         </TextBlock>
-        <Image x:Name="Assets_StoreLogo_png" Margin="315,90,296,148" Source="Assets/StoreLogo.png" Stretch="Fill" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition"/>
+        <Image x:Name="Assets_Square150x150Logo_scale_200_png" Margin="354,132,343,192" Source="Assets/Square150x150Logo.scale-200.png" Stretch="Fill" d:LayoutOverrides="LeftMargin, RightMargin, LeftPosition, RightPosition, TopPosition, BottomPosition"/>
     </Grid>
 </Page>
