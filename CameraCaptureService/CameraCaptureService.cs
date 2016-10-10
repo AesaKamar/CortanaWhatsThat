@@ -49,7 +49,7 @@ namespace CameraCaptureService
         private async Task<string> _Capture()
         {
             // Prepare and capture photo
-            var lowLagCapture = await _mediaCapture.PrepareLowLagPhotoCaptureAsync(ImageEncodingProperties.CreatePng());
+            var lowLagCapture = await _mediaCapture.PrepareLowLagPhotoCaptureAsync(ImageEncodingProperties.CreateJpeg());
             var capturedPhoto = await lowLagCapture.CaptureAsync();
 
             byte[] bytes = new byte[capturedPhoto.Frame.Size];
