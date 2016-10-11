@@ -32,7 +32,7 @@ namespace GoogleVisionAPI
             var resource = new ImagesResource(service);
 
             var googleImage = new Image() { Content = base64EncodedImage };
-            var googleFeature = new Feature() { Type = "LABEL_DETECTION" };
+            var googleFeature = new Feature() { Type = "LABEL_DETECTION" , MaxResults= 10};
             var googleAnnotateRequest = new AnnotateImageRequest()
             {
                 Features = new List<Feature>()
