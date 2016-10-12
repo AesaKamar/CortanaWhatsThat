@@ -5,7 +5,7 @@
     "Google.Apis.Core": "1.16.0",
     "Google.Apis.Discovery.v1": "1.16.0",
     "Google.Apis.Oauth2.v2": "1.16.0.623",
-    "Google.Apis.Vision.v1": "1.16.0.599",
+    "Google.Apis.Vision.v1": "1.16.0.643",
     "Microsoft.Bcl.Async": "1.0.168",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
     "Zlib.Portable.Signed": "1.11.0"

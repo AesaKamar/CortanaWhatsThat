@@ -68,7 +68,10 @@ namespace VoiceCommandService
             //Initialize some stuff
             var CaptureClient = new CameraCaptureService.CameraCaptureService();
             await CaptureClient.Init();
-            var GoogleVisionClient = new GoogleVisionAPI.VisionClient();
+
+
+            ///var GoogleVisionClient = new GoogleVisionAPI.VisionClient();
+            var MicrosoftVisionClient = new MicrosoftCognitiveVisionRepository.MicrosoftCognitiveVisionClient();
 
             //Tell the user that we are doing something
             var userMessage = new VoiceCommandUserMessage();
@@ -97,10 +100,14 @@ namespace VoiceCommandService
 
 
             //TODO: Send the Image through the Vision Client
-            List<string> annotationResponse;
+            ///List<string> googleAnnotationResponse;
+            string microsoftAnnotationResponse;
             try
             {
-                annotationResponse = await GoogleVisionClient.Run(imageString);
+                //Use Google
+                ///googleAnnotationResponse = await GoogleVisionClient.Run(imageString);
+                //Use Microsoft
+                microsoftAnnotationResponse = await MicrosoftVisionClient.Run(imageString);
             }
             catch (Exception)
             {
@@ -111,11 +118,12 @@ namespace VoiceCommandService
                 return;
             }
 
-            var joinedResponse = string.Join(", ", annotationResponse);
+            //var finalResponse = string.Join(", ", googleAnnotationResponse);
+            var finalResponse = microsoftAnnotationResponse;
 
             //TODO: Set the User Message, Display & Spoken
-            userMessage.DisplayMessage = joinedResponse;
-            userMessage.SpokenMessage = joinedResponse;
+            userMessage.DisplayMessage = finalResponse;
+            userMessage.SpokenMessage = finalResponse;
             response = VoiceCommandResponse.CreateResponse(userMessage);
 
             await connection.ReportSuccessAsync(response);
